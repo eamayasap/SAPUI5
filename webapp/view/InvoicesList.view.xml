@@ -1,0 +1,59 @@
+<mvc:View controllerName="logali.invoices.controller.InvoicesList"
+          xmlns:mvc="sap.ui.core.mvc" 
+          xmlns="sap.m"
+          displayBlock="true" >
+    <Panel id="IdILV1Panel1" accessibleRole="Region" >
+        <headerToolbar>
+            <Toolbar id="IDInvoicesToolbar1" >
+                <Title id="IDInvoicesTitle1" text="{i18n>InvoicesListTitle}"/>
+                <ToolbarSpacer id="IDInvoicesToolbarSpacer"/>
+                <SearchField id="IDInvoicesSearch1" width="50%" search=".onSearchInvoices" placeholder="{i18n>searchFieldplaceHolder}" />
+            </Toolbar>
+        </headerToolbar>
+        <Table id="IDInvoicesList1" 
+               headerText="{i18n>InvoicesListTitle}" 
+               class="sapUiResponsiveMargin" 
+               width="auto" 
+               items="{ path : 'northwind>/Invoices',
+                        sorter : { path : 'ShipperName',
+                                   group : true } }" >
+            <columns>
+                <Column id="IdILVColumn1" hAlign="End" minScreenWidth="Small" demandPopin="true" width="5em">
+                    <Text id="IdILVText1" text="{i18n>columnQuantity}"/>
+                </Column>
+                <Column id="IdILVColumn2" >
+                    <Text id="IdILVText2" text="{i18n>columnName}"/>
+                </Column>
+                <Column id="IdILVColumn3" minScreenWidth="Small" demandPopin="true" >
+                    <Text id="IdILVText3" text="{i18n>columnDiscount}"/>
+                </Column>
+                <Column id="IdILVColumn4" minScreenWidth="Tablet" >
+                    <Text id="IdILVText4" text="{i18n>columnSupplier}"/>
+                </Column>
+                <Column id="IdILVColumn5" hAlign="End" >
+                    <Text id="IdILVText5" text="{i18n>columnPrice}"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="IDInvoicesItem1" 
+                                type="Navigation"
+                                press="navigateToDetails" >
+                    <cells>
+                        <ObjectNumber id = "IDInvoicesNumber1" number = "{northwind>Quantity}" />
+                        <ObjectIdentifier id="IDInvoicesIdentifier1" title="{northwind>ProductName}" />
+                        <Text id="IDInvoicesText1" text="{ path: 'northwind>Discount',
+                                                                    formatter: '.formatter.invoiceDiscount' }" />
+                        <Text id="IDInvoicesText2" text="{northwind>ShipperName}"/>
+                        <ObjectNumber id= "IDInvoicesNumber2"
+                                    number="{ parts: [ {path: 'northwind>ExtendedPrice' },
+                                                        { path: 'currency>/eur' }],
+                                                type: 'sap.ui.model.type.Currency',
+                                                formatOptions: { showMeasure:true, preserveDecimals:false, currencyCode:false } }"
+                                unit="{currency>/eur}"
+                                state="{= ${northwind>ExtendedPrice} > 50 ? 'Success' : 'Error'}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Panel>
+</mvc:View>

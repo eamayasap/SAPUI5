@@ -1,0 +1,28 @@
+<mvc:View controllerName="logali.invoices.controller.Details"
+          xmlns:mvc="sap.ui.core.mvc" 
+          xmlns="sap.m"
+          xmlns:core="sap.ui.core" 
+          xmlns:logali="logali.invoices.control"
+          displayBlock="true" >
+    <Page id="IDDetailsPage1" 
+          title="{i18n>DetailsPageTitle}" 
+          showNavButton="true" 
+          navButtonPress=".onNavBack" >
+        <ObjectHeader id="IDDetailsHeader1" 
+                      title="{northwind>Quantity} x {northwind>ProductName}"
+                      responsive="true" 
+                      fullScreenOptimized="true" >
+            <attributes>
+                <ObjectAttribute id="IDDetailsAttribute1" text="{northwind>ShipName}" />
+                <ObjectAttribute id="IDDetailsAttribute2" text="{northwind>ShipAddress}" />
+                <ObjectAttribute id="IDDetailsAttribute3" text="{northwind>ShipCity}" />
+                <ObjectAttribute id="IDDetailsAttribute4" text="{northwind>ShipRegion}" />
+                <ObjectAttribute id="IDDetailsAttribute5" text="{northwind>ShipPostalCode}" />
+                <ObjectAttribute id="IDDetailsAttribute6" text="{northwind>ShipCountry}" />
+                <ObjectAttribute id="IDDetailsAttribute7" text="{northwind>CustomerID}" />
+                <ObjectAttribute id="IDDetailsAttribute8" text="{northwind>CustomerName}" />
+            </attributes>
+        </ObjectHeader>
+        <logali:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+    </Page>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View controllerName="logali.invoices.controller.Second"
+          xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" >
+    <Panel id="IDAppViewPanel1" 
+           headerText="{i18n>AppViewPanel1}" 
+           class="sapUiResponsiveMargin" 
+           width="auto" 
+           expandable="{device>/system/phone}"
+           expanded="{= !${device>/system/phone}}" >
+        <content>
+            <Button id="IDAppViewButton1" text="{i18n>AppViewButton1}" icon="sap-icon://accept"
+                    press=".onShowHello" class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop" />
+            <Button id="IDAppViewButton2" text="{i18n>AppViewButton2}"  icon="sap-icon://action"
+                    press=".onOpenDialog" class="sapUiSmallMarginEnd sapUiHideOnDesktop" />
+            <Input id="IDAppViewInput1" value="{/recipient/name}"
+                   valueLiveUpdate="true" width="20%" />
+            <Text id="IDAppViewText1" text="Hello {/recipient/name}" 
+                  class="boldElements" ></Text>
+        </content>
+    </Panel>
+    <core:Fragment fragmentName="logali.invoices.view.Fragment" type="XML" />
+</mvc:View>

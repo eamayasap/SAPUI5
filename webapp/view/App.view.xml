@@ -1,0 +1,9 @@
+<mvc:View controllerName="logali.invoices.controller.App"
+          xmlns:mvc="sap.ui.core.mvc" 
+          displayBlock="true"
+          xmlns="sap.m">
+    <Shell id="IDAppViewShell" >
+        <App id="IDAppViewApp">
+        </App>
+    </Shell>
+</mvc:View>

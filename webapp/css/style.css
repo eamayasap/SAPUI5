@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+.boldElements {
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.productRating {
+    padding: 0.75rem;
+}
+
+.productRating .sapMRI {
+    vertical-align: super;
+}
+
+.sapUiSizeCompact .sapMBtn {
+    height: 3.5rem;
+    padding: 0.1875rem 0
+}

@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" >
+    <Dialog id="IDDialogDialog1" title="Hello {/recipient/name}" >
+        <beginButton>
+            <Button id="IDDialogButton1" text="{i18n>DialogButton1}" press=".onCloseDialog" icon="sap-icon://decline" />
+        </beginButton>
+        <core:Icon id="IDDialogIcon1" src="sap-icon://account" size="2rem" />
+    </Dialog>
+</core:FragmentDefinition>
