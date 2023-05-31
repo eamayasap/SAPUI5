@@ -41,7 +41,19 @@ sap.ui.define([
                 var fValue = oEvent.getParameter("value");
                 var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
                 sap.m.MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fValue]));
-            }
+            },
 
+            onValidate: function () {
+                var inputEmployee = this.byId("IDDetailsInput1");
+                var valueEmployee = inputEmployee.getValue();
+
+                if (valueEmployee.length === 6) {
+                    this.byId("IDDetailsLabel2").setVisible(true);
+                    this.byId("IDDetailsSelect1").setVisible(true);
+                } else {
+                    this.byId("IDDetailsLabel2").setVisible(false);
+                    this.byId("IDDetailsSelect1").setVisible(false);
+                }
+            }
         });
     });

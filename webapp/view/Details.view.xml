@@ -24,5 +24,20 @@
             </attributes>
         </ObjectHeader>
         <logali:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+        <content>
+            <HBox id="IDDetailsHBox1">
+            <Label id="IDDetailsLabel1" labelFor="IDDetailsInput1" text="{i18n>DetailsLabelEmployee1}" class="sapUiSmallMargin" />
+            <Input id="IDDetailsInput1" maxLength="6" width="200px" class="sapUiSmallMarginEnd" liveChange="onValidate" />
+            <Label id="IDDetailsLabel2" labelFor="IDDetailsSelect1" text="{i18n>DetailsLabelCountry1}" class="sapUiSmallMargin" 
+                   visible="false"/>
+            <Select id="IDDetailsSelect1" forceSelection="false" visible="false" >
+                <items>
+                    <core:Item id="IDDetailsItem1" key="US" text="{i18n>CountryUS}" />
+                    <core:Item id="IDDetailsItem2" key="UK" text="{i18n>CountryUK}" />
+                    <core:Item id="IDDetailsItem3" key="MX" text="{i18n>CountryMX}" />
+                </items>
+            </Select>
+            </HBox>
+        </content>
     </Page>
 </mvc:View>
