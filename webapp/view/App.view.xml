@@ -1,9 +1,26 @@
 <mvc:View controllerName="logali.invoices.controller.App"
           xmlns:mvc="sap.ui.core.mvc" 
-          displayBlock="true"
-          xmlns="sap.m">
+          xmlns="sap.m"
+          xmlns:f="sap.f"
+          xmlns:core="sap.ui.core"
+          displayBlock="true" >
     <Shell id="IDAppViewShell" >
-        <App id="IDAppViewApp">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>Apptitle}" showHeader="true" >
+                    <headerContent>
+                        <Button id="IDAppViewButtonHeader1" 
+                                text="{i18n>AppViewButtonHeader1}"  
+                                icon="sap-icon://action"
+                                press=".onOpenDialogHeader" 
+                                class="sapUiSmallMarginEnd" />
+                    </headerContent>
+                    <content>
+                        <mvc:XMLView id="IDAppViewXMLView1" viewName="logali.invoices.view.Header" />
+                        <mvc:XMLView id="IDAppViewXMLView2" viewName="logali.invoices.view.InvoicesList" />
+                    </content>
+                </Page>
+            </pages>
         </App>
     </Shell>
 </mvc:View>

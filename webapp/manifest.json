@@ -89,7 +89,7 @@
         "async": true,
         "viewPath": "logali.invoices.view",
         "controlAggregation": "pages",
-        "controlId": "IDAppViewApp",         
+        "controlId": "app",
         "clearControlAggregation": false
       },
       "routes": [
@@ -97,7 +97,7 @@
           "name": "RouteApp",
           "pattern": "",
           "target": [
-            "TargetOverview"
+            "TargetApp"
           ]
         },
         {
@@ -106,15 +106,22 @@
           "target": [
             "TargetDetails"
           ]
+        },
+        {
+          "name": "ListTypes",
+          "pattern": "ListTypes",
+          "target": [
+            "TargetListTypes"
+          ]
         }
       ],
       "targets": {
-        "TargetOverview": {
+        "TargetApp": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Overview",
-          "viewName": "Overview"
+          "viewId": "App",
+          "viewName": "App"
         },
         "TargetDetails": {
           "viewType": "XML",
@@ -122,6 +129,13 @@
           "clearControlAggregation": false,
           "viewId": "Details",
           "viewName": "Details"
+        },
+        "TargetListTypes": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ListTypes",
+          "viewName": "ListTypes"
         }
       }
     },
@@ -129,7 +143,7 @@
       "viewName": "logali.invoices.view.App",
       "type": "XML",
       "async": true,
-      "id": "App"
+      "id": "app"
     }
   }
 }

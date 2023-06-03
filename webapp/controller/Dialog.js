@@ -25,7 +25,7 @@ sap.ui.define([
 
                     Fragment.load({
                         id: oView.getId(),
-                        name: "logali.invoices.view.Dialog",
+                        name: "logali.invoices.Fragments.Dialog",
                         controller: oFragmentController
                     }).then(function (oDialog) {
                         oView.addDependent(oDialog);

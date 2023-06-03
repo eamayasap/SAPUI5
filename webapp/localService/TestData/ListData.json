@@ -1,0 +1,122 @@
+{
+    "Products": [
+        {
+            "Id": "P1",
+            "Material": "Portatil",
+            "Brand": "Compaq",
+            "Model": "610",
+            "Weight": "3KG",
+            "Price": "300",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "id": "1",
+                    "Text": "Text 1"
+                },
+                {
+                    "id": "2",
+                    "Text": "Text 2"
+                },
+                {
+                    "id": "3",
+                    "Text": "Text 3"
+                }
+            ]
+        },
+        {
+            "Id": "P2",
+            "Material": "PC",
+            "Brand": "Compaq",
+            "Model": "1610",
+            "Weight": "7KG",
+            "Price": "300",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "id": "1",
+                    "Text": "Text 1"
+                },
+                {
+                    "id": "2",
+                    "Text": "Text 2"
+                },
+                {
+                    "id": "3",
+                    "Text": "Text 3"
+                }
+            ]
+        },
+        {
+            "Id": "P3",
+            "Material": "Grapadora",
+            "Brand": "American Crafts",
+            "Model": "1600",
+            "Weight": "1KG",
+            "Price": "20",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "id": "1",
+                    "Text": "Text 1"
+                },
+                {
+                    "id": "2",
+                    "Text": "Text 2"
+                },
+                {
+                    "id": "3",
+                    "Text": "Text 3"
+                }
+            ]
+        },
+        {
+            "Id": "P4",
+            "Material": "Silla de escritorio",
+            "Brand": "ASPEN",
+            "Model": "R45",
+            "Weight": "5KG",
+            "Price": "96",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "id": "1",
+                    "Text": "Text 1"
+                },
+                {
+                    "id": "2",
+                    "Text": "Text 2"
+                },
+                {
+                    "id": "3",
+                    "Text": "Text 3"
+                }
+            ]
+        }
+    ],
+    "News": [
+        {
+            "Title": "Los coches son distintivo ambiental",
+            "Description": "Unread - true, Priority - None, ShowCloseButton - true",
+            "Unread": true,
+            "Author": "20  minutos",
+            "Priority": "None",
+            "ShowCloseButton": true
+        },
+        {
+            "Title": "Los billetes del 'Ave Barato' de Madrid a Barcelona",
+            "Description": "Unread - true, Priority - Medium, ShowCloseButton - false",
+            "Unread": true,
+            "Author": "EL PAÍS",
+            "Priority": "Medium",
+            "ShowCloseButton": false
+        },
+        {
+            "Title": "Adif pone en marcha el macroproyecto",
+            "Description": "Unread - false, Priority - High, ShowCloseButton - false",
+            "Unread": false,
+            "Author": "20  minutos",
+            "Priority": "High",
+            "ShowCloseButton": false
+        }
+    ]
+}

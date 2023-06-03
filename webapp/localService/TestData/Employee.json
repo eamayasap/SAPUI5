@@ -1,0 +1,44 @@
+{
+    "employees": [
+        {
+            "employeeID": "1",
+            "LastName": "García Lopez",
+            "FirstName": "María",
+            "Country": "ES",
+            "City": "Madrid",
+            "PostalCode": "28021",
+            "Orders": [
+                {
+                    "OrderID": "208",
+                    "Freight": "65",
+                    "ShipAddress": "Calle Alcala"
+                },
+                {
+                    "OrderID": "2096",
+                    "Freight": "21",
+                    "ShipAddress": "Calle Mayor"
+                }
+            ]
+        },
+        {
+            "employeeID": "2",
+            "LastName": "Smith",
+            "FirstName": "John",
+            "Country": "UK",
+            "City": "London",
+            "PostalCode": "67021",
+            "Orders": [
+                {
+                    "OrderID": "102",
+                    "Freight": "20",
+                    "ShipAddress": "Square Street"
+                },
+                {
+                    "OrderID": "907",
+                    "Freight": "98",
+                    "ShipAddress": "Circle Street"
+                }
+            ]
+        }
+    ]
+}

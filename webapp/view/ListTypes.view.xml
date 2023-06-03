@@ -1,0 +1,102 @@
+<mvc:View controllerName="logali.invoices.controller.ListTypes"
+          xmlns:mvc="sap.ui.core.mvc" 
+          xmlns:core="sap.ui.core"
+          xmlns:layout="sap.ui.layout"
+          xmlns="sap.m"
+          displayBlock="true" >
+    <Shell id="IDListTypesViewShell" >
+        <App id="IDListTypesViewApp">
+            <pages>
+                <Page id="IDListTypesViewPage" showNavButton="true" navButtonPress=".onNavBack">
+                    <IconTabBar id="IDListTypesViewIconTab">
+                        <items>
+                            <IconTabFilter id="IDListTypesViewIconFilter1" text="{i18n>ObjectList}">
+                                <List id="IDListTypesViewList1" items="{ path : '/Products',
+                                                                         filters : [{ path : 'Brand',
+                                                                                      operator : 'EQ',
+                                                                                      value1 : 'Compaq' }]}" >
+                                    <items>
+                                        <ObjectListItem id="IDListTypesViewObject1"
+                                                        title="{Material} {Brand} {Number}"
+                                                        number="{Price}"
+                                                        numberUnit="{Currency}"
+                                                        type="Detail">
+                                            <ObjectAttribute id="IDListTypesViewAtt1" text="{Brand}" />
+                                            <ObjectAttribute id="IDListTypesViewAtt2" text="{Weight}" />
+                                        </ObjectListItem>
+                                    </items>
+                                </List>
+                            </IconTabFilter>
+                            <IconTabFilter id="IDListTypesViewIconFilter2" text="{i18n>StandardList}">
+                                <Select id="IDListTypesViewSelect2" selectedKey="{/typeSelection}">
+                                    <items>
+                                        <core:Item id="IDListTypesViewCoreItem1" key="None" text="None" />
+                                        <core:Item id="IDListTypesViewCoreItem2" key="MultiSelect" text="Multi Select" />
+                                        <core:Item id="IDListTypesViewCoreItem3" key="SingleSelect" text="Single Select" />
+                                        <core:Item id="IDListTypesViewCoreItem4" key="SingleSelectLeft" text="Single Select Left" />
+                                        <core:Item id="IDListTypesViewCoreItem5" key="SingleSelectMaster" text="Single Select Master" />
+                                    </items>
+                                </Select>
+                                <Button id="IDListTypesViewButton1" text="Show Selected items"
+                                        press="onShowSelectedRow" class="sapUiSmallMarginBegin" />
+                                <Button id="IDListTypesViewButton2" text="Delete Selected items"
+                                        press="onDeleteSelectedRow" class="sapUiSmallMarginBegin" />
+                                <List id="IDListTypesViewList2" items="{ path : '/Products',
+                                                                         sorter : { path : 'Brand',
+                                                                                    descending: false,
+                                                                                    group: true },
+                                                                         groupHeaderFactory : '.getGroupHeader' }"
+                                                                mode="{/typeSelection}" >
+                                    <items>
+                                        <StandardListItem id="IDListTypesViewStandard1"
+                                                          title="{Material} {Brand} {Number}" 
+                                                          description="{Weight}"
+                                                          info="{Price} {Currency}"
+                                                          type="Active">
+                                        </StandardListItem>
+                                    </items>
+                                </List>
+                            </IconTabFilter>
+                            <IconTabFilter id="IDListTypesViewIconFilter3" text="{i18n>InputList}">
+                                <List id="IDListTypesViewList3" items="{/Products}" mode="Delete" delete="onDeleteRow" >
+                                    <items>
+                                        <InputListItem id="IDListTypesViewInput1" label="{Brand}">
+                                            <Select id="IDListTypesViewSelect1" items="{Properties}" >
+                                                <core:Item id="IDListTypesViewItem1" key="{Id}" text="{Text}" />
+                                            </Select>
+                                        </InputListItem>
+                                    </items>
+                                </List>
+                            </IconTabFilter>
+                            <IconTabFilter id="IDListTypesViewIconFilter4" text="{i18n>NotificationList}">
+                                <List id="IDListTypesViewList4" items="{/News}" >
+                                    <items>
+                                        <NotificationListItem id="IDListTypesViewNot1" title="{Title}"
+                                                                                       description="{Description}"
+                                                                                       unread="{Unread}"
+                                                                                       priority="{Priority}"
+                                                                                       authorName="{Author}"
+                                                                                       showCloseButton="{ShowCloseButton}"/>
+                                    </items>
+                                </List>
+                            </IconTabFilter>
+                            <IconTabFilter id="IDListTypesViewIconFilter5" text="{i18n>CustomList}">
+                                <List id="IDListTypesViewList5" items="{/News}" >
+                                    <items>
+                                        <CustomListItem id="IDListTypesViewCustom" >
+                                            <layout:Grid id="IDListTypesViewGrid" defaultSpan="XL3 L3 M6 S12" >
+                                                <Text id="IDListTypesViewText1" text="{Title}" />
+                                                <Text id="IDListTypesViewText2" text="{Author}" />
+                                                <Text id="IDListTypesViewText3" text="{Description}" />
+                                            </layout:Grid>
+                                        </CustomListItem>
+                                    </items>
+                                </List>
+                            </IconTabFilter>
+                        </items>
+                    </IconTabBar>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

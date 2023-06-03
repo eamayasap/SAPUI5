@@ -1,3 +1,4 @@
+<!--Dialogo que abre mensaje toast al dar click en un boton-->
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" >
     <Dialog id="IDDialogDialog1" title="Hello {/recipient/name}" >
         <beginButton>
@@ -5,4 +6,4 @@
         </beginButton>
         <core:Icon id="IDDialogIcon1" src="sap-icon://account" size="2rem" />
     </Dialog>
-</core:FragmentDefinition>
+</core:FragmentDefinition> 
